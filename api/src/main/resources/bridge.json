@@ -1,0 +1,7 @@
+{
+  "id": "example",
+  "name": "Example",
+  "version": "1.0.0",
+  "description": "Example Description",
+  "application": "clazz.to.app"
+}

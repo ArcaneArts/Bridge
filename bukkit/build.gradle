@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'art.arcane.bridge'
+version '1.0.0'
+
+repositories {
+    mavenLocal {
+        content {
+            includeGroup("org.bukkit")
+            includeGroup("org.spigotmc")
+        }
+    }
+    maven { url "https://arcanearts.jfrog.io/artifactory/archives" }
+    maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation project(':api')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    implementation 'org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}
